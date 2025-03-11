@@ -1,0 +1,7 @@
+# Ignore IDE configuration and image files
+.idea/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
