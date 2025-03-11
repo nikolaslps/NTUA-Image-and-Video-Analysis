@@ -7,6 +7,9 @@
 - **Department**: School of Electrical and Computer Engineering
 
 ## Laboratories
-### Lab 1: This laboratory focuses on the implementation and analysis of Gaussian and Laplacian pyramids for image compression and reconstruction.
+### Lab 1: Overview
+This laboratory focuses on the implementation and analysis of Gaussian and Laplacian pyramids for image compression and reconstruction.
 
-### Lab 2:
+### Lab 2: Overview
+
+
