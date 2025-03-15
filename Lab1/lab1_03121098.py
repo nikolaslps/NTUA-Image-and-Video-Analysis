@@ -164,30 +164,6 @@ def L_Quantization(laplacian_I, bins):
   return C.astype(np.uint8)
   #C.astype(np.float64)
 
-# def L_Quantization(L,bins):                                                       # Παράμετροι εισόδου είναι η εικόνα που θα κβαντιστεί και ο αριθμός των bins
-#     if (len(L.shape)==2):                                                         # Grayscale εικόνα
-#         C=np.zeros((L.shape[0], L.shape[1]), dtype=np.float64)
-#         max_val=L.max()
-#         n=256/bins                                                                # Μέγιστη τιμή είναι το 255, υπολογισμός bin size για n bins
-#         for i in range (0,L.shape[0]):                                            # Για κάθε pixel
-#             for j in range(0,L.shape[1]):
-#                 for m in range(0,bins):
-#                     if (L[i][j]<=(m+1/2)*n and L[i][j]>=(m-1/2)*n):               # Εξίσωση (5) της πηγής
-#                         C[i][j]=m*n
-#                         break
-#     else:                                                                         # Εικόνα με χρώμα
-#         C=np.zeros((L.shape[0], L.shape[1],L.shape[2]), dtype=np.float64)
-#         max_val=L.max()
-#         n=255/bins                                                                # Μέγιστη τιμή είναι το 255, υπολογίζουμε το bin size για n bins
-#         for i in range (0,L.shape[0]):                                            # Για κάθε pixel
-#             for j in range(0,L.shape[1]):
-#                 for k in range(0,L.shape[2]):
-#                     for m in range(0,bins):
-#                         if (L[i][j][k]<=(m+1/2)*n and L[i][j][k]>=(m-1/2)*n):     # Εξίσωση (5) της πηγής
-#                             C[i][j][k]=m*n
-#                             break
-#     return C
-
 """**Δοκιμές Αλγορίθμου:**
 
 Θα μετατρέψουμε αρχικά την φωτογραφία 'lena' σε RGB και Grayscale προκειμένου να ελέγξουμε τον αλγόριθμο τόσο για έχρωμες όσο και για άχρωμες εικόνες. Ως γνωστόν, οι grayscale εικόνες έχουν ένα μόνο χρωματικό κανάλι και όχι τρία.
